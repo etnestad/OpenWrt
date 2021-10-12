@@ -69,3 +69,14 @@ define Device/iei_puzzle-m902
   IMAGE/sdcard.img.gz := boot-img-ext4 | sdcard-img-ext4 | gzip | append-metadata
 endef
 TARGET_DEVICES += iei_puzzle-m902
+
+define Device/solidrun_clearfog-gt-8k
+  $(call Device/Default-arm64)
+  DEVICE_TITLE := SolidRun ClearFog GT 8K
+  DEVICE_VENDOR := SolidRun
+  DEVICE_MODEL := ClearFog GT 8K
+  DEVICE_DTS := armada-8040-clearfog-gt-8k
+  SUPPORTED_DEVICES := solidrun,clearfog-gt-8k
+endef
+TARGET_DEVICES += solidrun_clearfog-gt-8k
+
